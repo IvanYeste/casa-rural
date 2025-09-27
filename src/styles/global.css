@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+
+/* Define tus tokens de color (v4 usa @theme) */
+@theme {
+  --color-brand: #166a4d;
+  --color-brand-dark: #0e523c;
+  --color-brand-light: #1f8a62;
+  --color-wood: #8b5e3c;
+  --color-wood-light: #b07a50;
+  --color-wood-dark: #6e4a2f;
+}
+
+/* Puedes seguir usando @apply */
+::selection {
+  @apply bg-brand/20;
+}
+a {
+  @apply text-brand hover:text-brand-dark;
+}
+
+/* Componentes utilitarios */
+.btn-brand {
+  @apply inline-flex items-center gap-2 rounded-md bg-brand px-4 py-2 text-white hover:bg-brand-dark transition;
+}
+.btn-ghost {
+  @apply inline-flex items-center gap-2 rounded-md bg-white/90 text-stone-900 hover:bg-white transition;
+}
+
+/* Utilidad para el degradado madera */
+.bg-wood {
+  background: linear-gradient(180deg, #b07a50 0%, #8b5e3c 100%);
+}
