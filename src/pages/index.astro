@@ -1,11 +1,24 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const title = "Casa Rural – Inicio";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body style="font-family: system-ui; margin: 0; line-height: 1.5;">
+    <header style="padding: 1rem; border-bottom: 1px solid #eee;">
+      <nav style="max-width: 960px; margin: 0 auto; display:flex; gap:1rem;">
+        <a href="/">Inicio</a>
+        <a href="/contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main style="max-width: 960px; margin: 2rem auto; padding: 0 1rem;">
+      <h1>Bienvenida/o a la Casa Rural</h1>
+      <p>Texto de ejemplo. Usa el menú para ir a “Contacto”.</p>
+    </main>
+  </body>
+</html>
